@@ -5,19 +5,28 @@
 
 import json
 from os.path import join, split as split_path
+from sentence_transformers import SentenceTransformer
+
+
+model = SentenceTransformer("./finetuned-four-epoch-multi-qa-mpnet-base-dot-v1")
 
 # TODO Implement the preprocessing steps here
 def handle_input_file(file_location, output_path):
     with open(file_location) as f:
         data = json.load(f)
+        article = []
+        title = data.get('title', '') or ''
+        content = data.get('content', '') or ''
+        timestamp = data.get('timestamp', '') or ''
+        article.append(f"{title} {content} {timestamp}")
     
-    # ...
-    transformed_data = data
-    # ...
+    transformed_data = model.encode(article, convert_to_tensor=True)
+    transformed_data_list = transformed_data.cpu().numpy().tolist()
+    output_data = {"transformed_representation": transformed_data_list}
     
     file_name = split_path(file_location)[-1]
     with open(join(output_path, file_name), "w") as f:
-        json.dump(transformed_data, f)
+        json.dump(output_data, f)
     
 
 # This is a useful argparse-setup, you probably want to use in your project:

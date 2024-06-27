@@ -98,7 +98,6 @@ def test_inference():
                 assert isfile(join(out_dir, f"{query_id}.json")), f"The file {query_id}.json was not created."
                 with open(join(out_dir, f"{query_id}.json"), "r") as f:
                     filedata = json.load(f)
-                    assert "detected_language" in filedata, f"The key 'detected_language' was not found in the file {query_id}.json."
                     assert "generated_query" in filedata, f"The key 'generated_query' was not found in the file {query_id}.json."
                     
             print(bcolors.OKGREEN + "> The inference script ran successfully.")

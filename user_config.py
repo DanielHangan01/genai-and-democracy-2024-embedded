@@ -1,1 +1,2 @@
-TYPE = "embeddings" # Choose one of "embeddings", "all-to-en", "all-to-all", "all-to-en-tags"
+TYPE = "embeddings"
+HUGGING_FACE_AUTH="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"
