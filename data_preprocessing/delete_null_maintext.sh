@@ -1,6 +1,6 @@
 #!/bin/bash
 # Directory containing JSON files
-dir="./dataset/en_news/"
+dir="./dataset/tr_news/"
 
 # Loop through all JSON files
 find "$dir" -type f -name "*.json" | while read -r file; do

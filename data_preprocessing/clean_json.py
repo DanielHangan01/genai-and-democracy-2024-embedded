@@ -1,8 +1,8 @@
 import json
 
 # Input and output file paths
-input_file = '/home/daniel/workspace/github.com/danielhangan01/genai-and-democracy-2024-embedded/data_preprocessing/ro_combined.json'
-output_file = '/home/daniel/workspace/github.com/danielhangan01/genai-and-democracy-2024-embedded/data_preprocessing/test_ro_news.json'
+input_file = '/home/daniel/workspace/github.com/danielhangan01/genai-and-democracy-2024-embedded/data_preprocessing/dataset/cl_tr_news.json'
+output_file = '/home/daniel/workspace/github.com/danielhangan01/genai-and-democracy-2024-embedded/data_preprocessing/dataset/test_tr_news.json'
 
 # Function to clean content field of each JSON object
 def clean_content(content):

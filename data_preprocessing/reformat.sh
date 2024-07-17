@@ -1,6 +1,6 @@
 #!/bin/bash
 # Directory containing JSON files
-dir="/home/daniel/workspace/github.com/danielhangan01/genai-and-democracy-2024-embedded/data_preprocessing/dataset/ro_news"
+dir="/home/daniel/workspace/github.com/danielhangan01/genai-and-democracy-2024-embedded/data_preprocessing/dataset/tr_news"
 
 # Loop through all JSON files
 find "$dir" -type f -name "*.json" | while read -r file; do
