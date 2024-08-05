@@ -38,3 +38,5 @@ You can test each part of your pipeline individually.
 To do so, you can call ```python test.py -part [PART]``` where ```[PART]``` is one of ```setup```, ```preprocess```, or ```inference```.
 Note that this will only test if all data is loaded and stored correctly, but not how well your model performs.
 
+# Running Demo File
+In order to run the demo file, please run the setup script first, so that you have the model downloaded and ready.
